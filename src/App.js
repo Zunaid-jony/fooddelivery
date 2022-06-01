@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import BannerName from './Components/BannerName';
 import benner from '../src/Components/images/img/delivery.png'
 import SubMenuContainer from './Components/SubMenuContainer';
+import MenuCard from './Components/MenuCard';
+import Froot from '../src/Components/images/img/f5.png'
 function App() {
   useEffect(()=>{
     const menuLi = document.querySelectorAll("#menu li");
@@ -37,7 +39,28 @@ function App() {
               <div className='menuCard'>
                 <SubMenuContainer name={"Menu Category"}/>
               </div>
-              <div className='rowContainer'></div>
+              {/* dfffffffffffffff */}
+              <div className='rowContainer'>
+                  <div> 
+                    <MenuCard imgSrc={Froot} isActive name={"Froots"}></MenuCard>
+                  </div>
+                  <div> 
+                    <MenuCard imgSrc={Froot} name={"Froots"}></MenuCard>
+                  </div>
+                  <div> 
+                    <MenuCard imgSrc={Froot} name={"Froots"}></MenuCard>
+                  </div>
+                  <div> 
+                    <MenuCard imgSrc={Froot} name={"Froots"}></MenuCard>
+                  </div>
+                  <div> 
+                    <MenuCard imgSrc={Froot} name={"Froots"}></MenuCard>
+                  </div>
+                  <div> 
+                    <MenuCard imgSrc={Froot} name={"Froots"}></MenuCard>
+                  </div>
+              </div>
+              {/* djjjjjjjjjjjjjjjjjjjjjjjjjjjjjk */}
               <div className='dishitemContainer'></div>
 
             </div>

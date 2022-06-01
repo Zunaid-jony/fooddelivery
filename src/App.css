@@ -342,4 +342,53 @@ main{
   
   color: white;
 }
+
+
+.rowContainer{
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.rowContainer::-webkit-scrollbar{
+  display: none  ;
+}
+.rowMenuCard{
+  width: 95px;
+  min-width: 80px;
+  height: 130px;
+  border-radius: 5px;
+  background:white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  transition: 0.5s;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.rowContainer .imgBox{
+  width: 100%;
+  margin-top: -15px;
+
+}
+.rowMenuCard h3{
+  font-size: 20px;
+  transition: 0.5s;
+}
+.loadMenu{
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 4px;
+  background-color: #ff80bf;
+  transition: 0.5s;
+  color: white;
+}
 /* main End */
