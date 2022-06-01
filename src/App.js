@@ -6,6 +6,7 @@ import { AccountBalanceWalletOutlined, Chat, Favorite, HomeRounded, Settings, Su
 import { useEffect } from 'react';
 import BannerName from './Components/BannerName';
 import benner from '../src/Components/images/img/delivery.png'
+import SubMenuContainer from './Components/SubMenuContainer';
 function App() {
   useEffect(()=>{
     const menuLi = document.querySelectorAll("#menu li");
@@ -29,8 +30,16 @@ function App() {
               <BannerName name={"Jony"}  discount={"30"}link={"#"}/>
               <img 
               src={benner}
-              className="deliveryPic" ></img>
-                
+              className="deliveryPic" ></img>  
+            </div>
+            {/* dishContainer */}
+            <div className='dishContainer'>
+              <div className='menuCard'>
+                <SubMenuContainer name={"Menu Category"}/>
+              </div>
+              <div className='rowContainer'></div>
+              <div className='dishitemContainer'></div>
+
             </div>
         </div>
         <div className='rightMenu'></div>
