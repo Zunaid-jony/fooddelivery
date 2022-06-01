@@ -1,7 +1,7 @@
 import React from 'react'
 
-function MenuContainer({link, icon}) {
-  return <li>
+function MenuContainer({link, icon, isHome}) {
+  return <li className={isHome ? "active": ""}>
       <a href={link}>
           <samp className="icon">{icon}</samp>
       </a>

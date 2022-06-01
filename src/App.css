@@ -227,8 +227,76 @@ transform: translateX(calc(60px * 0));
 main{
   width: 100%;
   height: auto;
-  background-color: #555;
+  background-color: #faf9fb;
   margin-top: 70px;
 
+}
+.bannerContent{
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: #faf9fb;
+  padding-bottom: 100px;
+  background: url(../src/Components/images/img/heroBg.png)
+  no-repeat center;
+  background-size: cover;
+  background-color: #ff80bf;
+  
+
+}
+.banner{
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  background: url(../src/Components/images/img/heroBg.png)
+  no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  background-color: #ff80bf;
+  padding: 0px 10px;
+}
+.deliveryPic{
+  position: absolute;
+  right: -0px;
+  bottom: -80px;
+  width: 240px;
+}
+.mainContainer{
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainContainer h3{
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-weight: bold;
+}
+.mainContainer p{
+  font-size: 16px;
+  width: 220px;
+  color: white;
+  margin: 5px 0;
+}
+.mainContainer p span{
+  color: red;
+  font-weight: bold;
+}
+.mainContainer a{
+  background-color: #ff80bf;
+  padding: 5px 20px;
+  
+  border-radius: 100vw;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+.mainContainer a:hover{
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
 }
 /* main End */
