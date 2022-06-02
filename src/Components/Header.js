@@ -28,7 +28,7 @@ function Header() {
         <h2 className='userName'>Md Jony ...</h2>
      </div>
      <div className='toggleMenu'>
-         <BarChart className='toggleIcon'/>
+         <BarChart  className='toggleIcon'/>
      </div>
   </header>
 }

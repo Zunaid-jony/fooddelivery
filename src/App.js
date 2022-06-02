@@ -9,14 +9,23 @@ import {
   Settings,
   SummarizeRounded,
 } from "@mui/icons-material";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import BannerName from "./Components/BannerName";
 import benner from "../src/Components/images/img/delivery.png";
 import SubMenuContainer from "./Components/SubMenuContainer";
 import MenuCard from "./Components/MenuCard";
 import Froot from "../src/Components/images/img/f5.png";
+//akto 
 import { MenuItems, Items } from "../src/Components/Data";
+import ItemCard from "./Components/ItemCard";
+import RoketCard from "./Components/RoketCard";
 function App() {
+  //main dish state
+  const [isMainData, setMainData]= useState(
+    Items.filter((element)=> element.itemId === "buger01")
+  );
+    //end
+
   useEffect(() => {
     const menuLi = document.querySelectorAll("#menu li");
     function setMenuActive() {
@@ -26,6 +35,7 @@ function App() {
     menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
 
     // Menu cards
+    
     const menuCards = document
       .querySelector(".rowContainer")
       .querySelectorAll(".rowMenuCard");
@@ -34,7 +44,13 @@ function App() {
       this.classList.add("active");
     }
     menuCards.forEach((n) => n.addEventListener("click", setMenuCardActive));
-  }, []);
+    //isMainData ata deya hoise
+  }, [isMainData]);
+
+  //main dish on function filters
+  const setData =(itemId)=>{
+    setMainData(Items.filter((element)=> element.itemId === itemId ))
+  }
   return (
     <div className="App">
       {/* Heder sectin */}
@@ -56,7 +72,7 @@ function App() {
             <div className="rowContainer">
               {MenuItems &&
                 MenuItems.map((data) => (
-                  <div key={data.id}>
+                  <div key={data.id} onClick={()=> setData(data.itemId)}>
                     <MenuCard
                       imgSrc={data.imgSrc}
                  
@@ -66,11 +82,46 @@ function App() {
                   </div>
                 ))}
             </div>
-            {/* djjjjjjjjjjjjjjjjjjjjjjjjjjjjjk */}
-            <div className="dishitemContainer"></div>
+
+
+            {/*filter card */}
+            
+            <div className="dishitemContainer">
+            {
+              isMainData && isMainData.map(data=> (
+                <ItemCard 
+                key={data.id}
+                imgSrc={data.imgSrc}
+                 name={data.name} 
+                 ratings={data.ratings}
+                  price={data.price} />
+
+              ))
+            }
+
+
+     
+            
+
+            </div>
+
+            
+
+
+
           </div>
         </div>
-        <div className="rightMenu"></div>
+        {/* visa card */}
+        <div className="rightMenu">
+          <div className="debitCardContainer">
+            <div className="debitCard">
+              <RoketCard/> 
+            </div>
+            
+          </div> 
+        </div>
+
+
       </main>
       {/* boottom menu */}
       <div className="bottomMenu">

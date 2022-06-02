@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   background: #faf9fb;
-  overflow: hidden;
+  overflow-x: hidden;
   
 
 }
@@ -155,7 +155,7 @@ header{
 }
 .bottomMenu ul li a .icon{
   position: relative;
-  display: block;
+  /* display: block; */
   text-align: center;
   line-height: 70px;
   transition: 0.5s;
@@ -229,6 +229,8 @@ main{
   height: auto;
   background-color: #faf9fb;
   margin-top: 70px;
+  /* akhane ... */
+  margin-bottom: 90px;
 
 }
 .bannerContent{
@@ -347,8 +349,7 @@ main{
 .rowContainer {
   display: flex;
   align-items: center;
-  /* atake hoi to .... */
-  overflow-x: scroll !important;
+  overflow-x: scroll;
   overflow-y: hidden;
   margin: 10px 0;
   padding: 10px 0;
@@ -408,4 +409,175 @@ main{
   transition: 0.5s;
   color: white;
 }
+/* main card  */
+.dishitemContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* intaresting */
+  flex-wrap: wrap;
+}
+.itemCard{
+  width: 180px;
+  height: 190px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 18px 0;
+}
+.itemCard .imgBox {
+  height: 100px;
+  width: 100px;
+ 
+  display: flex;
+  position: absolute;
+  top: -30px;
+
+
+}
+.itemImg{
+  position: absolute;
+  top: 0;
+  width: 80%;
+}
+.itemCard .imgBox img{
+width: 100%;
+height: 100%;
+align-items: center;
+justify-content: center;
+
+}
+.itemContent{
+  /* background-color: #fff;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 10px; */
+  width: 100%;
+}
+.itemCard{
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px -10px #faf9fb; */
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 10px;
+}
+.itemCard .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemContent .bottom .rating .MuiSvgIcon-root{
+  font-size: 16px;
+}
+.itemContent .addtoCart{
+  background-color: #ff80bf;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: bold;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+}
 /* main End */
+
+/* RIGHT MENU */
+.rightMenu{
+  width: 350px;
+  height: calc(100% -60px);
+  background-color: #fff;
+  padding: fixed;
+  right: 0;
+  top: 65px;
+  z-index: 105;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
+}
+.debitCardContainer{
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+.debitCard{
+  position: relative;
+  width: 100%;
+  height: 170px;
+  min-height: 170px;
+  border-radius: 15px;
+  background-color: rosybrown;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 650px){
+  .rowContainer{
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+  }
+  .itemCard{
+    width: 308px;
+    height: 240px;
+   margin: 1px;
+   margin-bottom: 30px;
+   margin-top: 30px;
+  }
+  .itemCard .imgBox{
+    width: 120px;
+    height: 120px;
+  }
+  .inputBox{
+    width: 60%;
+  }
+  .toggleMenu .toggleIcon{
+    color: #d84c92;
+    
+  }
+  .banner{
+    width: 100%;
+    height: 300px;
+  }
+  .deliveryPic{
+    position: absolute;
+    right: 70px;
+    bottom: -80;
+    width: 340px;
+  }
+  .mainContainer p {
+    font-size: 16px;
+    width: 420px;
+    margin-top: 30px;
+    color: #d84c92;
+    margin: 5px 0;
+}
+.bannerContent {
+ 
+  padding: 10px;
+  padding-top: 40px;
+  padding-left: 40px;
+  margin: 4px;
+}
+
+  
+}
