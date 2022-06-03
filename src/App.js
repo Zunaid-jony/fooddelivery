@@ -19,6 +19,8 @@ import Froot from "../src/Components/images/img/f5.png";
 import { MenuItems, Items } from "../src/Components/Data";
 import ItemCard from "./Components/ItemCard";
 import RoketCard from "./Components/RoketCard";
+import CartItem from "./Components/CartItem";
+import Buy from '../src/Components/images/img/buy-card.jpg'
 function App() {
   //main dish state
   const [isMainData, setMainData]= useState(
@@ -116,10 +118,30 @@ function App() {
           <div className="debitCardContainer">
             <div className="debitCard">
               <RoketCard/> 
+              
             </div>
           </div> 
+
           <div className="cartCheckOutContainer">
-            <div cartContainer></div>
+          <SubMenuContainer name={"Carts Items"}/>
+            <div className="cartContainer">
+            
+              <div className= "cardItems">
+               <CartItem 
+               name={'kachi kahba'}
+               imgSrc={Froot}
+               price={'44'}
+               qty={'4'}
+               /> 
+
+               {/*  */}
+           
+             
+               
+
+
+              </div>  
+            </div>
           </div>
         </div>
 

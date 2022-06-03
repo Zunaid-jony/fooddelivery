@@ -491,7 +491,7 @@ justify-content: center;
 
 /* RIGHT MENU */
 .rightMenu{
-  width: 350px;
+  width: 382px;
   height: calc(100% -60px);
   background-color: #fff;
   padding: fixed;
@@ -502,7 +502,7 @@ justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 20px 10px;
-  transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
 }
 .debitCardContainer{
@@ -514,9 +514,196 @@ justify-content: center;
   position: relative;
   width: 100%;
   height: 170px;
+  min-width: 300px;
   min-height: 170px;
   border-radius: 15px;
+  background-color: #d84c92;
   
+}
+.debitCard::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f8901c;
+  transform: rotate(5deg);
+  border-radius: 15px;
+  filter: blur(2px);
+  z-index: -2;
+ 
+}
+.debitCard::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    35deg, rgba(255,255,255,0.3),
+    rgba(225,225,255,0.1));
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 15px;
+}
+.cardGroup{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.cardLogo , .cardChip, .card_number, .card_name, .card_from, .card_to, .card_ring{
+  position: absolute;
+}
+.cardLogo{
+  width: 40px;
+
+  top: 30px;
+  right: 30px;
+  height: auto;
+
+}
+.cardChip{
+  width: 40px;
+  height: auto;
+  top: 50px;
+  left: 30px;
+}
+.card_number, .card_from, .card_to, .card_name{
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
+}.card_number{
+  left: 30px;
+  margin-top: 8px;
+}
+.card_name{
+  font-size: 20px;
+  bottom: 30px;
+  left: 30px;
+}
+.card_from{
+  font-size: 14px;
+  bottom: 30px;
+  right: 90px;
+}
+.card_to{
+  bottom: 30px;
+  right: 26px;
+  font-size: 14px;
+}
+.card_ring{
+ height: 400px;
+ width: 400px;
+ border-radius: 100vw;
+ background: transparent;
+ border: 50px solid rgba(0, 0, 0, 0.1);
+ top:-250px;
+ right: -250px;
+
+}
+/* add to card */
+.cartContainer{
+  width: 100%;
+  min-height: 280px;
+  max-width: 364px;
+  margin-top: 10px;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+.cartCheckOutContainer{
+ margin-top: 10px;
+ width: 100%;
+ margin: 4px;
+}
+.cartContainer::-webkit-scrollbar{
+  display: none;
+}
+.cardItem{
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  width: 480px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+/*  */
+
+
+
+
+
+ 
+}
+
+.cardItem .imgBox{
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  background: #e0dee2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.cardItem .imgBox img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cardItem .itmSection{
+  margin-left: 10px;
+}
+.cardItem .itmSection .itemName{
+  font-size: 16px;
+  color: #2a2b3c;
+
+}
+.cardItem .itmSection .itemQuantity{
+  font-size: 16px;
+  color: #d84c92;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+  
+}
+.cardItem .itmSection .itemQuantity span{
+  color: #d84c92;
+}
+.cardItem .itmSection .itemQuantity .quantity{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 60px;
+}
+.cardItem .itmSection .itemQuantity .quantity .itemRemove{
+  font-size: 24px;
+  margin-left: -34px;
+ 
+}
+.cardItem .itmSection .itemQuantity .quantity .itemAdd{
+  font-size: 24px;
+  margin-right: 36px;
+  
+}
+
+.cardItem .itmPrice .itemPriceValue{
+  font-size: 16px;
+  color:#d84c92 ;
+}
+.cardItem .itmPrice .dolorSign{
+  margin-right: 0px;
+  color: #d84c92;
+
+ 
 
 }
 
