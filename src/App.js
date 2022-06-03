@@ -21,7 +21,22 @@ import ItemCard from "./Components/ItemCard";
 import RoketCard from "./Components/RoketCard";
 import CartItem from "./Components/CartItem";
 import Buy from '../src/Components/images/img/buy-card.jpg'
+import { Button } from "@mui/material";
+import Navigations from './Components/Shared/Navigation/Navigations';
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Login from '../src/Components/Login/Login/Login'
+
 function App() {
+
+
+
+
+  
   //main dish state
   const [isMainData, setMainData]= useState(
     Items.filter((element)=> element.itemId === "buger01")
@@ -55,6 +70,19 @@ function App() {
   }
   return (
     <div className="App">
+
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="" element={<Login></Login> }></Route> 
+      </Routes> 
+    
+    </BrowserRouter>
+
+
+       
+
+
       {/* Heder sectin */}
       <Header />
 
@@ -135,31 +163,22 @@ function App() {
                /> 
 
                {/*  */}
-           
-             
-               
-
 
               </div>  
             </div>
+
+            <div className="totalSection">
+               <h3>Total</h3>
+               <p><span> $</span>  34</p>
+            </div> 
+            <button className="checkOut">Check Out</button>
           </div>
         </div>
 
 
       </main>
-      {/* boottom menu */}
-      <div className="bottomMenu">
-        <ul id="menu">
-          <MenuContainer link={"#"} icon={<HomeRounded />} isHome />
-          <MenuContainer link={"#"} icon={<Chat />} />
-          <MenuContainer link={"#"} icon={<AccountBalanceWalletOutlined />} />
-          <MenuContainer link={"#"} icon={<Favorite />} />
-          <MenuContainer link={"#"} icon={<SummarizeRounded />} />
-          <MenuContainer link={"#"} icon={<Settings />} />
-
-          <div className="indicator"></div>
-        </ul>
-      </div>
+      <Navigations></Navigations> 
+     
     </div>
   );
 }

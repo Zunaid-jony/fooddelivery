@@ -2,8 +2,19 @@ import {  BarChart, SearchRounded, ShoppingCartRounded } from '@mui/icons-materi
 import React from 'react'
 import Logo from '../../src/Components/images/img/f5.png'
 import Profile from '../../src/Components/images/jony.png.jpg'
+import { useEffect } from 'react';
 
 function Header() {
+
+    // check out options active
+ useEffect(()=>{
+     const toggleMenu  = document.querySelector(".toggleMenu");
+     toggleMenu.addEventListener('click',()=>{
+         document.querySelector('.rightMenu').classList.toggle('active')
+     })
+
+ })
+
   return <header>
       <img src={Logo}
       className='logo' alt=''></img>

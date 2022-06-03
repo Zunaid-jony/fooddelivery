@@ -489,6 +489,9 @@ justify-content: center;
 }
 /* main End */
 
+
+
+
 /* RIGHT MENU */
 .rightMenu{
   width: 382px;
@@ -502,8 +505,16 @@ justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 20px 10px;
+
+/* right menu improtent */
+  transform: translateX(400%);
+
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
+  
+}
+.rightMenu.active{
+  transform: translateX(0%)
 }
 .debitCardContainer{
   padding: 10px;
@@ -702,9 +713,39 @@ justify-content: center;
 .cardItem .itmPrice .dolorSign{
   margin-right: 0px;
   color: #d84c92;
+}
+/* check out button */
+.totalSection{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+}
+.totalSection h3{
+  font-size: 20px;
+  font-weight: 600;
+  color: #d84c92;
+}
+.totalSection p{
+  font-size: 18px;
+  font-weight: 600;
+  color: #d84c92;
 
- 
-
+}
+.checkOut{
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px 20px;
+  background: #d84c92;
+  color: white;
+  border-radius: 100vw;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 
