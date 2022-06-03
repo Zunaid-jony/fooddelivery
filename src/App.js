@@ -117,8 +117,10 @@ function App() {
             <div className="debitCard">
               <RoketCard/> 
             </div>
-            
           </div> 
+          <div className="cartCheckOutContainer">
+            <div cartContainer></div>
+          </div>
         </div>
 
 
